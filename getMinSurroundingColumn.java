@@ -1,11 +1,25 @@
-public static int getMinSurroundingColumn(final Coordinate start, final Coordinate end) 
+public static int getMinSurroundingColumn(final Coordinate start, final Coordinate end)
 {
     if(start.column <= end.column)
     {
-        return start.column;
-    }    
+        if(start.column - 1 >= 1)
+        { 
+            return start.column - 1;
+        }
+        else
+        {
+            return start.column;
+        }
+    }
     else
     {
-        return end.column;
+        if(end.column - 1 >= SIZE)
+        {
+            return end.column - 1;
+        }
+        else
+        {
+            return end.column;
+        }
     }
 }

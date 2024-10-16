@@ -2,10 +2,24 @@ public static int getMaxSurroundingColumn(final Coordinate start, final Coordina
 {
     if(start.column >= end.column)
     {
-        return start.column;
+        if(start.column + 1 < SIZE)
+        { 
+            return start.column + 1;
+        }
+        else
+        {
+            return start.column;
+        }
     }
     else
     {
-        return end.column;
+        if(end.column + 1 < SIZE)
+        {
+            return end.column + 1;
+        }
+        else
+        {
+            return end.column;
+        }
     }
 }
