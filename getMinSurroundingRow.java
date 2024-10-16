@@ -2,10 +2,24 @@ public static int getMinSurroundingRow(final Coordinate start, final Coordinate 
 {
     if(start.row <= end.row)
     {
-        return start.row;
+        if(start.row - 1 >= SIZE)
+        { 
+            return start.row - 1;
+        }
+        else
+        {
+            return start.row;
+        }
     }
     else
     {
-        return end.row;
+        if(end.row - 1 >= SIZE)
+        {
+            return end.row - 1;
+        }
+        else
+        {
+            return end.row;
+        }
     }
 }
